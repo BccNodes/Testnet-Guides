@@ -149,15 +149,16 @@ sudo systemctl restart nibid && sudo journalctl -u nibid -f -o cat
 Validator Oluşturalım
 ```
 nibid tx staking create-validator \
-  --amount 1000000unibi \
-  --from WALLETNAME \
-  --commission-max-change-rate "0.01" \
-  --commission-max-rate "0.2" \
-  --commission-rate "0.05" \
-  --min-self-delegation "1" \
-  --pubkey  $(nibid tendermint show-validator) \
-  --moniker $NODENAME \
-  --chain-id nibiru-testnet-1
+--chain-id nibiru-testnet-1 \
+--commission-rate 0.05 \
+--commission-max-rate 0.2 \
+--commission-max-change-rate 0.1 \
+--min-self-delegation "1000000" \
+--amount 9000000unibi \
+--pubkey $(nibid tendermint show-validator) \
+--moniker "$NODENAME" \
+--from wallet \
+--fees 5000unibi
 ```
 
 ### İşe yarar komutlar
