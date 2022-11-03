@@ -23,7 +23,7 @@
 # OKP4 Manuel node kurulumu
 
 <p align="center">
-  <img height="220" height="auto" src="okp4.png">
+  <img height="220" height="auto" src="nibiru.png">
 </p>
 
 Orijinal Döküman:
