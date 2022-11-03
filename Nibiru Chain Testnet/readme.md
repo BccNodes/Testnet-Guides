@@ -20,7 +20,7 @@
     </tbody>
 </table>
 
-# OKP4 Manuel node kurulumu
+# Nibiru Chain Manuel node kurulumu
 
 <p align="center">
   <img height="220" height="auto" src="nibiru.png">
