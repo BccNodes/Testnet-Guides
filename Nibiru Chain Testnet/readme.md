@@ -182,7 +182,7 @@ sudo systemctl restart nibid
 ```
 Delegate stake
 ```
-nibid tx staking delegate VALOPERADRESİNİZ 10000000uknow --from=CÜZDANİSMİ --chain-id=okp4-nemeton --gas=auto
+nibid tx staking delegate $(nibid keys show wallet --bech val -a) 10000000unibi --from=wallet --chain-id=okp4-nemeton --gas=auto
 ```
 
 # BccNodes API && RPC && STATE-SYNC
