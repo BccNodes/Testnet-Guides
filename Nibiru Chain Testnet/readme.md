@@ -30,7 +30,7 @@ Orijinal Döküman:
 >- [Doğrulayıcı kurulum talimatları](https://docs.nibiru.fi/run-nodes/validators/)
 
 Explorer:
->- https://explorer.bccnodes.com/okp4
+>- https://explorer.bccnodes.com/nibiru
 
 
 ## Gerekli güncellemeleri ve araçları kurunuz
