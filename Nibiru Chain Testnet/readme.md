@@ -212,7 +212,27 @@ Endpoints:
 >- [BccNodes RPC endpoint](https://nibiru.rpc.bccnodes.com/)
 
 ### State Sync
-Aşağıdaki komutları çalıştırarak düğümünüzü dakikalar içinde senkronize edebilirsiniz.
-```
 
+```
+sudo systemctl stop nibid
+nibid tendermint unsafe-reset-all --home $HOME/.nibid --keep-addr-book
+
+SNAP_RPC="https://nibiru.rpc.bccnodes.com:443"
+
+LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
+BLOCK_HEIGHT=$((LATEST_HEIGHT - 2000)); \
+TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+peers="5631ef4078b98a299428e149c595a543b3f1efd9@194.163.135.104@nibiru.rpc.bccnodes.com"
+sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.nibid/config/config.toml
+
+sed -i -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
+s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
+s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
+s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"|" $HOME/.nibid/config/config.toml
+
+sudo systemctl restart nibid
+sudo journalctl -fu nibid -o cat
 ```
