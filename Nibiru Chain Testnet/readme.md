@@ -170,7 +170,7 @@ nibid status 2>&1 | jq .SyncInfo
 ```
 
 ## Validator Oluşturalım
->> Cüzdan bakiyesini kontrol etmek için; nibid query bank balances CÜZDANADRESİNİZ
+>> Cüzdan bakiyesini kontrol etmek için; `nibid query bank balances CÜZDANADRESİNİZ`
 ```
 nibid tx staking create-validator \
 --chain-id nibiru-testnet-1 \
