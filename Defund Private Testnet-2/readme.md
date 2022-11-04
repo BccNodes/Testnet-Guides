@@ -165,16 +165,16 @@ defundd status 2>&1 | jq .SyncInfo
 >> Cüzdan bakiyesini kontrol etmek için; `defundd query bank balances CÜZDANADRESİNİZ`
 ```
 defundd tx staking create-validator \
---chain-id nibiru-testnet-1 \
---commission-rate 0.05 \
---commission-max-rate 0.2 \
---commission-max-change-rate 0.1 \
---min-self-delegation "1000000" \
---amount 9000000unibi \
---pubkey $(nibid tendermint show-validator) \
---moniker "$NODENAME" \
---from wallet \
---fees 5000unibi
+  --amount 5000000ufetf \
+  --from wallet \
+  --commission-max-change-rate "0.01" \
+  --commission-max-rate "0.2" \
+  --commission-rate "0.05" \
+  --min-self-delegation "1" \
+  --pubkey  $(defundd tendermint show-validator) \
+  --moniker $NODENAME \
+  --chain-id defund-private-2 \
+  --fees=2000unibi 
 ```
 
 ### İşe yarar komutlar
