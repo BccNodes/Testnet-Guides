@@ -206,15 +206,21 @@ Delegate stake
 defundd tx staking delegate $(defundd keys show wallet --bech val -a) 10000000ufetf --from=wallet --chain-id=defund-private-2 --gas=auto
 ```
 
-# BccNodes API && RPC && STATE-SYNC
+# BccNodes API && RPC && STATE-SYNC && ADDRBOOK 
 
-Endpoints:
+### Endpoints:
 >- [BccNodes API endpoint](https://defund.api.bccnodes.com/)
 
 >- [BccNodes RPC endpoint](https://defund.rpc.bccnodes.com/)
 
-### State Sync (NodeJumper'dan alıntıdır)
+### State Sync 
 
 ```
+
+```
+
+### Addrbook
+```
+wget -O $HOME/.defund/config/addrbook.json "https://raw.githubusercontent.com"
 
 ```
