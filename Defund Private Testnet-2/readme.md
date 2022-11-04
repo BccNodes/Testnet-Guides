@@ -101,7 +101,7 @@ wget -O ~/.defund/config/genesis.json https://raw.githubusercontent.com/defund-l
 
 ## Peers ayarlayalım
 ```
-SEEDS="85279852bd306c385402185e0125dffeed36bf22@38.146.3.194:26656,09ce2d3fc0fdc9d1e879888e7d72ae0fefef6e3d@65.108.105.48:11256"
+SEEDS="85279852bd306c385402185e0125dffeed36bf22@38.146.3.194:26656,09ce2d3fc0fdc9d1e879888e7d72ae0fefef6e3d@65.108.105.48:11256,9aa8a73ea9364aa3cf7806d4dd25b6aed88d8152@defund.seed.mzonder.com:10756"
 PEERS=""
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.defund/config/config.toml
 ```
