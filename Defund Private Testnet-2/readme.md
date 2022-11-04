@@ -69,7 +69,7 @@ NODENAME=<MONIKER_ISMINIZI_GİRİN>
 ## Github reposunun bir kopyasını oluşturun ve kurun
 ```
 cd $HOME
-git clone https://github.com/defund-labs/defund
+git clone https://github.com/defund-labs/defund.git
 cd defund
 git checkout v0.1.0
 make install
