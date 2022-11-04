@@ -34,9 +34,9 @@ Explorer:
 
 ## Sistem Gereksinimleri
 
-| Node Tipi |CPU | RAM   | Depolama  |     OS      |
-|-----------|----|-------|-----------|-------------|
-| Testnet   |   4| 16GB  |   200GB   |Ubuntu 20.04 |
+| Node Tipi | CPU |  RAM  | Depolama  |     OS       | GO Version|
+|-----------|-----|-------|-----------|--------------|-----------|
+| Testnet   |  4  | 16GB  |   200GB   | Ubuntu 20.04 | Go v1.19.1|
 
 ## Gerekli güncellemeleri ve araçları kurunuz
 ```
