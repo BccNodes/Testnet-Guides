@@ -109,6 +109,8 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 ## Minimum gas değerini ayarlayalım
 ```
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025ufetf\"/" ~/.defund/config/app.toml
+sed -i 's/max_num_inbound_peers =.*/max_num_inbound_peers = 150/g' ~/.defund/config/config.toml
+sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 150/g' ~/.defund/config/config.toml
 ```
 
 ## Pruning Yapılandıralım ( İsteğe bağlı)
