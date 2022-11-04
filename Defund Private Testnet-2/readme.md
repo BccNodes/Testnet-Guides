@@ -86,8 +86,6 @@ defundd config keyring-backend test
 defundd config chain-id defund-private-2
 defundd init $NODENAME --chain-id defund-private-2
 defundd config node tcp://localhost:26657
-
-
 ```
 Cüzdan oluşturalım veya var olan cüzdanı geri getirelim
 
