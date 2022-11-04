@@ -137,7 +137,7 @@ nibid tendermint unsafe-reset-all --home $HOME/.nibid
 ```
 sudo tee /etc/systemd/system/nibid.service > /dev/null <<EOF
 [Unit]
-Description=okp4d
+Description=nibid
 After=network-online.target
 
 [Service]
