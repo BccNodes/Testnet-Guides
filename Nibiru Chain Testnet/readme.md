@@ -33,9 +33,11 @@ Explorer:
 >- https://explorer.bccnodes.com/nibiru
 
 ## Sistem Gereksinimleri
-```
-4 CPU 8 RAM 100 GB
-```
+CPU : 4 
+RAM : 8 GB
+Storage : 100GB SSD
+Connection : 100 Mbps
+OS : Ubuntu 20.04 
 
 ## Gerekli güncellemeleri ve araçları kurunuz
 ```
