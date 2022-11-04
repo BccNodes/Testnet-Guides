@@ -206,14 +206,14 @@ Delegate stake
 defundd tx staking delegate $(defundd keys show wallet --bech val -a) 10000000ufetf --from=wallet --chain-id=defund-private-2 --gas=auto
 ```
 
-# BccNodes API && RPC && STATE-SYNC && ADDRBOOK (LesnikUtsa'dan alıntıdır)
+# BccNodes API && RPC && STATE-SYNC && ADDRBOOK 
 
 ### Endpoints:
 >- [BccNodes API endpoint](https://defund.api.bccnodes.com/)
 
 >- [BccNodes RPC endpoint](https://defund.rpc.bccnodes.com/)
 
-### State Sync 
+### State Sync (LesnikUtsa'dan alıntıdır)
 
 ```
 SNAP_RPC=https://t-defund.rpc.utsa.tech:443
