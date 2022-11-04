@@ -32,6 +32,17 @@ Orijinal Döküman:
 Explorer:
 >- https://explorer.bccnodes.com/nibiru
 
+<table width="900px" align="center">
+    <tbody>
+        <tr valign="top">
+            <td width="300px" align="center">
+            <span><strong>Twitter</strong></span><br><br />
+            <a href="https://twitter.com/bccnodes" target="_blank" rel="noopener noreferrer">
+            <img height="70px" src="https://github.com/berkcaNode/berkcaNode/blob/main/twitter.png">
+            
+        </tr>
+    </tbody>
+</table>
 
 ## Gerekli güncellemeleri ve araçları kurunuz
 ```
