@@ -33,11 +33,10 @@ Explorer:
 >- https://explorer.bccnodes.com/defund
 
 ## Sistem Gereksinimleri
-CPU : 4 
-RAM : 16 GB
-Storage : 200GB SSD
-Connection : 100 Mbps
-OS : Ubuntu 20.04 
+
+| Node Tipi |CPU | RAM   | Storage  |     OS     |
+|-----------|----|------ |----------|------------|
+| Testnet   |   4|  16GB | 200GB    |Ubuntu 20.04 |
 
 ## Gerekli güncellemeleri ve araçları kurunuz
 ```
