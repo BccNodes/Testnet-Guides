@@ -20,10 +20,10 @@
     </tbody>
 </table>
 
-# Nibiru Chain Manuel node kurulumu
+# Defund Private Testnet-2 Manuel node kurulumu
 
 <p align="center">
-  <img height="220" height="auto" src="nibiru.png">
+  <img height="220" height="auto" src="defund.png">
 </p>
 
 Orijinal Döküman:
