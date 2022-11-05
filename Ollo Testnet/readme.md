@@ -160,7 +160,7 @@ ollod status 2>&1 | jq .SyncInfo
 ```
 
 ## Validator Oluşturalım
->> Cüzdan bakiyesini kontrol etmek için; `ollod query bank balances CÜZDANADRESİNİZ`
+>> Cüzdan bakiyesini kontrol etmek için; `ollod query bank balances $(ollod keys show wallet -a)`
 ```
 ollod tx staking create-validator \
   --amount 1000000utollo \
