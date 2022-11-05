@@ -213,12 +213,14 @@ sudo systemctl stop ollod
 ollod tendermint unsafe-reset-all --home $HOME/.ollo
 
 SNAP_RPC=https://node.ollo.zone:443
-peers="a99fc4e81770ca32d574cac2e8680dccc9b55f74@18.144.61.148:26656"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 500)); \
 TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+
+peers="a99fc4e81770ca32d574cac2e8680dccc9b55f74@18.144.61.148:26656"
+sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.ollo/config/config.toml
 
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
 s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
