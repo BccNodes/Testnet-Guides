@@ -25,6 +25,12 @@
 ```
 wget -O ollo.sh https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Ollo%20Testnet/ollo.sh && chmod +x ollo.sh && ./ollo.sh
 ```
+## Kurulum bittiğinde lütfen değişkenleri sisteme yükleyin
+```
+source $HOME/.bash_profile
+```
+
+
 
 
 # Ollo Testnet Manuel node kurulumu
