@@ -20,6 +20,13 @@
     </tbody>
 </table>
 
+
+## Ollo Testnet script kurulum
+```
+wget -O ollo.sh https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Ollo%20Testnet/ollo.sh && chmod +x ollo.sh && ./ollo.sh
+```
+
+
 # Ollo Testnet Manuel node kurulumu
 
 <p align="center">
@@ -38,11 +45,6 @@ Explorer:
 |-----------|-----|-------|-----------|--------------|-----------|
 | Testnet   |  4  | 8GB   |   200GB   | Ubuntu 20.04 | Go v1.19.1|
 
-
-## Ollo Testnet script kurulum
-```
-wget -O ollo.sh https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Ollo%20Testnet/ollo.sh && chmod +x ollo.sh && ./ollo.sh
-```
 
 
 ## Gerekli güncellemeleri ve araçları kurunuz
