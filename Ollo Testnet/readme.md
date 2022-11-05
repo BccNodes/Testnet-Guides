@@ -27,7 +27,7 @@
 </p>
 
 Orijinal Döküman:
->- [Doğrulayıcı kurulum talimatları](https://github.com/defund-labs/testnet/tree/main/defund-private-2)
+>- [Doğrulayıcı kurulum talimatları](https://docs.ollo.zone/join/running_a_node)
 
 Explorer:
 >- https://explorer.bccnodes.com/ollo
@@ -88,7 +88,7 @@ ollod config node tcp://localhost:26657
 ```
 Cüzdan oluşturalım veya var olan cüzdanı geri getirelim
 
-```ollod keys add CÜZDANİSMİ```             #Yeni oluşturmak için
+```ollod keys add wallet                ``` #Yeni oluşturmak için
 
 ``` ollod keys add CÜZDANİSMİ --recover ``` #Cüzdan kelimlerinizi kullanarak geri getirmek için
 
@@ -156,11 +156,11 @@ sudo systemctl restart ollod && journalctl -o cat -fu ollod
 ```
 ## Senkronizasyon durumunu kotnrol edelim ve çıktı false olduğunda discrod kanalından token alıp validator oluşturalım
 ```
-defundd status 2>&1 | jq .SyncInfo
+ollod status 2>&1 | jq .SyncInfo
 ```
 
 ## Validator Oluşturalım
->> Cüzdan bakiyesini kontrol etmek için; `defundd query bank balances CÜZDANADRESİNİZ`
+>> Cüzdan bakiyesini kontrol etmek için; `ollod query bank balances CÜZDANADRESİNİZ`
 ```
 ollod tx staking create-validator \
   --amount 1000000utollo \
