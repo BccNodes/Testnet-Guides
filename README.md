@@ -27,3 +27,9 @@ This should be shielded from the open internet
 Light Client Daemon
 For automated management of anything you can do with the CLI
 This should be shielded from the open internet
+
+Eğer resimdeki gibi Error: `failed to listen on 127.0.0.1:26657: listen tcp 127.0.0.1:26657: bind: address already in use` hatası alırsanız aşağıdaki komutu projeye göre düzenleyerek portları değiştirebilirsiniz, nodea restart attıktan sonra problem çözülecektir;
+
+```CUSTOM_PORT=10
+sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:${CUSTOM_PORT}658\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:${CUSTOM_PORT}657\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:${CUSTOM_PORT}060\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:${CUSTOM_PORT}656\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":${CUSTOM_PORT}660\"%" $HOME/.nibid/config/config.toml
+sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${CUSTOM_PORT}317\"%; s%^address = \":8080\"%address = \":${CUSTOM_PORT}080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:${CUSTOM_PORT}090\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:${CUSTOM_PORT}091\"%" $HOME/.ollod/config/app.toml```
