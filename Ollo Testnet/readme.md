@@ -196,43 +196,6 @@ sudo systemctl restart ollod
 ```
 Delegate stake
 ```
-ollod tx staking delegate $(ollod keys show wallet --bech val -a) 10000000utollo --from=wallet --chain-id=defund-private-2 --gas=auto
+ollod tx staking delegate $(ollod keys show wallet --bech val -a) 10000000utollo --from=wallet --chain-id=ollo-testnet-1 --gas=auto
 ```
 
-# BccNodes API && RPC && STATE-SYNC && ADDRBOOK 
-
-### Endpoints:
->- [BccNodes API endpoint](https://ollo.api.bccnodes.com/)
-
->- [BccNodes RPC endpoint](https://ollo.rpc.bccnodes.com/)
-
-### State Sync
-
-```
-sudo systemctl stop ollod
-ollod tendermint unsafe-reset-all --home $HOME/.ollo
-
-SNAP_RPC=https://node.ollo.zone:443
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 500)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
-
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
-
-peers="a99fc4e81770ca32d574cac2e8680dccc9b55f74@18.144.61.148:26656"
-sed -i 's|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.ollo/config/config.toml
-
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.ollo/config/config.toml
-
-systemctl restart ollod && journalctl -u ollod -f -o cat
-```
-
-### Addrbook
-```
-wget -O $HOME/.defund/config/addrbook.json "https://raw.githubusercontent.com"
-
-```
