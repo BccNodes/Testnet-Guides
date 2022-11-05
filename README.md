@@ -28,7 +28,7 @@ Light Client Daemon
 For automated management of anything you can do with the CLI
 This should be shielded from the open internet
 
-Eğer resimdeki gibi Error: `failed to listen on 127.0.0.1:26657: listen tcp 127.0.0.1:26657: bind: address already in use` hatası alırsanız aşağıdaki komutu projeye göre düzenleyerek portları değiştirebilirsiniz, nodea restart attıktan sonra problem çözülecektir;
+Eğer resimdeki gibi Error: `failed to listen on 127.0.0.1:26657: listen tcp 127.0.0.1:26657: bind: address already in use` hatası alırsanız aşağıdaki komutta `.ollo` olan klasör ismini projeye göre düzenleyerek portları değiştirebilirsiniz, nodea restart attıktan sonra problem çözülecektir;
 
 ```
 CUSTOM_PORT=10
