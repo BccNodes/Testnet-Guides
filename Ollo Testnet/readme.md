@@ -74,7 +74,7 @@ git checkout v0.0.1
 make install
 ```
 
-## Versiyonu kontrol edelim; v0.0.1 olmalı
+## Versiyonu kontrol edelim; lastest olmalı
 ```
 ollod version
 ```
