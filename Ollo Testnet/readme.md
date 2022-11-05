@@ -209,6 +209,9 @@ ollod tx staking delegate $(ollod keys show wallet --bech val -a) 10000000utollo
 ### State Sync
 
 ```
+sudo systemctl stop ollod
+ollod tendermint unsafe-reset-all --home $HOME/.ollo
+
 SNAP_RPC=https://node.ollo.zone:443
 peers="a99fc4e81770ca32d574cac2e8680dccc9b55f74@18.144.61.148:26656"
 LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
@@ -222,7 +225,7 @@ s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
 s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
 s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.ollo/config/config.toml
-defundd tendermint unsafe-reset-all --home $HOME/.defund
+
 systemctl restart ollod && journalctl -u ollod -f -o cat
 ```
 
