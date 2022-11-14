@@ -239,6 +239,6 @@ systemctl restart defundd && journalctl -u defundd -f -o cat
 
 ### Addrbook
 ```
-wget -O $HOME/.defund/config/addrbook.json "https://raw.githubusercontent.com"
+wget -O $HOME/.defund/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Defund%20Private%20Testnet-3/addrbook.json"
 
 ```
