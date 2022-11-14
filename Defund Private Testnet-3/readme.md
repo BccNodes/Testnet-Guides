@@ -182,7 +182,7 @@ defundd tx staking create-validator \
   --pubkey  $(defundd tendermint show-validator) \
   --moniker $NODENAME \
   --chain-id defund-private-2 \
-  --fees=2000unibi 
+  --fees=2000ufetf
 ```
 
 ### İşe yarar komutlar
