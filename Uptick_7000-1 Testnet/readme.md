@@ -170,17 +170,17 @@ uptickd status 2>&1 | jq .SyncInfo
 ## Validator Oluşturalım
 >> Cüzdan bakiyesini kontrol etmek için; `uptickd query bank balances CÜZDANADRESİNİZ`
 ```
-defundd tx staking create-validator \
-  --amount 5000000ufetf \
+uptickd tx staking create-validator \
+  --amount 4900000000000000000auptick \
   --from wallet \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
-  --commission-rate "0.05" \
+  --commission-rate "0.07" \
   --min-self-delegation "1" \
-  --pubkey  $(defundd tendermint show-validator) \
+  --pubkey  $(uptickd tendermint show-validator) \
   --moniker $NODENAME \
-  --chain-id defund-private-2 \
-  --fees=2000ufetf
+  --chain-id uptick_7000-1 \
+  --fees 20auptick
 ```
 
 ### İşe yarar komutlar
@@ -205,7 +205,7 @@ sudo systemctl restart uptickd
 ```
 Delegate stake
 ```
-uptickd tx staking delegate $(uptickd keys show wallet --bech val -a) 10000000ufetf --from=wallet --chain-id=defund-private-2 --gas=auto
+uptickd tx staking delegate $(uptickd keys show wallet --bech val -a) 10000000auptick --from=wallet --chain-id=uptick_7000-1 --gas=auto
 ```
 
 # BccNodes API && RPC && STATE-SYNC && ADDRBOOK 
@@ -217,14 +217,14 @@ uptickd tx staking delegate $(uptickd keys show wallet --bech val -a) 10000000uf
 
 >- [BccNodes gRPC endpoint](https://uptick.grpc.bccnodes.com:20090)
 
-### State Sync (LesnikUtsa'dan alıntıdır)
+### State Sync 
 
 ```
-
+ŞİMDİLİK ÇALIŞMIYOR
 ```
 
 ### Addrbook
 ```
-wget -O $HOME/.uptickd/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Defund%20Private%20Testnet-3/addrbook.json"
+wget -O $HOME/.uptickd/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Uptick_7000-1%20Testnet/addrbook.json"
 
 ```
