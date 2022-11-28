@@ -26,7 +26,7 @@
   <img height="220" height="auto" src="c4e.png">
 </p>
 
-Uptick Discord:
+C4E Discord:
 >- [Discord](https://discord.gg/chain4energy)
 
 Explorer:
