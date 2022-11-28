@@ -8,7 +8,7 @@
             </td>
             <td width="300px" align="center">
             <span><strong>Website</strong></span><br><br />
-            <a href="https://bccnodes.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://bccnodes.net/" target="_blank" rel="noopener noreferrer">
             <img height="70px" src="https://github.com/berkcaNode/berkcaNode/blob/main/web.png">
             </td>
             <td width="300px" align="center">
