@@ -20,23 +20,23 @@
     </tbody>
 </table>
 
-# Uptick_7000-1 Testnet Manuel node kurulumu
+# Chain4Energy Mainnet Manuel node kurulumu
 
 <p align="center">
-  <img height="220" height="auto" src="uptick.png">
+  <img height="220" height="auto" src="c4e.png">
 </p>
 
 Uptick Discord:
->- [Discord](https://github.com/defund-labs/testnet/tree/main/defund-private-2)
+>- [Discord](https://discord.gg/chain4energy)
 
 Explorer:
->- https://explorer.bccnodes.com/uptick
+>- https://explorer.bccnodes.com/chain4energy
 
 ## Sistem Gereksinimleri
 
 | Node Tipi | CPU |  RAM  | Depolama  |     OS       | GO Version|
 |-----------|-----|-------|-----------|--------------|-----------|
-| Testnet   |  4  | 16GB  |   200GB   | Ubuntu 20.04 | Go v1.19.1|
+| Testnet   |  4  | 16GB  |   300GB   | Ubuntu 20.04 | Go v1.19.1|
 
 ## Gerekli güncellemeleri ve araçları kurunuz
 ```
@@ -169,62 +169,62 @@ c4ed status 2>&1 | jq .SyncInfo
 ## Validator Oluşturalım
 >> Cüzdan bakiyesini kontrol etmek için; `uptickd query bank balances CÜZDANADRESİNİZ`
 ```
-uptickd tx staking create-validator \
-  --amount 4900000000000000000auptick \
+c4ed tx staking create-validator \
+  --amount 1999000uc4e \
   --from wallet \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
   --commission-rate "0.07" \
   --min-self-delegation "1" \
-  --pubkey  $(uptickd tendermint show-validator) \
+  --pubkey  $(c4ed tendermint show-validator) \
   --moniker $NODENAME \
-  --chain-id uptick_7000-1 \
-  --fees 20auptick
+  --chain-id perun-1 \
+  --fees 250uc4e
 ```
 
 ### İşe yarar komutlar
 Logları kontrol et
 ```
-journalctl -fu uptickd -o cat
+journalctl -fu c4ed -o cat
 ```
 
 Servisi başlat
 ```
-sudo systemctl start uptickd
+sudo systemctl start c4ed
 ```
 
 Servisi durdur
 ```
-sudo systemctl stop uptickd
+sudo systemctl stop c4ed
 ```
 
 Servisi yeniden başlat
 ```
-sudo systemctl restart uptickd
+sudo systemctl restart c4ed
 ```
 Delegate stake
 ```
-uptickd tx staking delegate $(uptickd keys show wallet --bech val -a) 10000000auptick --from=wallet --chain-id=uptick_7000-1 --gas=auto
+c4ed tx staking delegate $(c4ed keys show wallet --bech val -a) 10000000uc4e --from=wallet --chain-id=perun-1 --gas=auto
 ```
 
 # BccNodes API && RPC && STATE-SYNC && ADDRBOOK 
 
 ### Endpoints:
->- [BccNodes API endpoint](https://uptick.api.bccnodes.com/)
+>- [BccNodes API endpoint](https://c4e.api.bccnodes.com/)
 
->- [BccNodes RPC endpoint](https://uptick.rpc.bccnodes.com/)
+>- [BccNodes RPC endpoint](https://c4e.rpc.bccnodes.com/)
 
->- [BccNodes gRPC endpoint](https://uptick.grpc.bccnodes.com:20090)
+>- [BccNodes gRPC endpoint](https://c4e.grpc.bccnodes.com:20090)
 
 ### State Sync 
 
 ```
-ŞİMDİLİK ÇALIŞMIYOR
+NA
 ```
 
 ### Addrbook
 ```
-wget -O $HOME/.uptickd/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Uptick_7000-1%20Testnet/addrbook.json"
+wget -O $HOME/.c4e-chain/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Uptick_7000-1%20Testnet/addrbook.json"
 
 ```
 
