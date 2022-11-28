@@ -224,7 +224,7 @@ NA
 
 ### Addrbook
 ```
-wget -O $HOME/.c4e-chain/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Uptick_7000-1%20Testnet/addrbook.json"
+wget -O $HOME/.c4e-chain/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Chain4Energy%20Mainnet/addrbook.json"
 
 ```
 
