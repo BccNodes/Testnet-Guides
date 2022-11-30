@@ -96,7 +96,8 @@ Cüzdan oluşturalım veya var olan cüzdanı geri getirelim
 ## Genesis ve addrbook yükleyelim
 ```
 wget https://raw.githubusercontent.com/chain4energy/c4e-chains/main/perun-1/genesis.json -O $HOME/.c4e-chain/config/genesis.json
-wget https://snapshots.nodestake.top/c4e/addrbook.json -O $HOME/.c4e-chain/config/addrbook.json
+
+wget -O $HOME/.c4e-chain/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Chain4Energy%20Mainnet/addrbook.json"
 
 ```
 
