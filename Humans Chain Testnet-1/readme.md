@@ -67,7 +67,7 @@ NODENAME=<MONIKER_ISMINIZI_GİRİN>
 
 ## Github reposunun bir kopyasını oluşturun ve kurun
 ```
-https://github.com/humansdotai/humans.git
+git clone https://github.com/humansdotai/humans.git
 cd humans
 git checkout v1.0.0
 go build -o humansd cmd/humansd/main.go
