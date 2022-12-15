@@ -26,7 +26,7 @@
   <img height="220" height="auto" src="humans.jpg">
 </p>
 
-Uptick Discord:
+Humans Discord:
 >- [Discord](https://discord.gg/humansdotai)
 
 Explorer:
