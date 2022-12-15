@@ -72,7 +72,7 @@ rm -rf humans
 git clone https://github.com/humansdotai/humans
 cd humans
 git checkout v1.0.0
-go build -o $HEART cmd/humansd/main.go
+go build -o humansd cmd/humansd/main.go
 sudo mv $HEART /usr/bin/
 ```
 
