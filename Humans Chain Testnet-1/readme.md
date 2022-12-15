@@ -23,14 +23,14 @@
 # Humans Chain Testnet Manuel node kurulumu
 
 <p align="center">
-  <img height="220" height="auto" src="humans.png">
+  <img height="220" height="auto" src="humans.jpg">
 </p>
 
 Uptick Discord:
 >- [Discord](https://discord.gg/humansdotai)
 
 Explorer:
->- https://explorer.bccnodes.com/uptick
+>- https://explorer.bccnodes.com/humans
 
 ## Sistem Gereksinimleri
 
