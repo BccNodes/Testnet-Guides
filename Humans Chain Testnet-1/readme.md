@@ -67,11 +67,13 @@ NODENAME=<MONIKER_ISMINIZI_GİRİN>
 
 ## Github reposunun bir kopyasını oluşturun ve kurun
 ```
-git clone https://github.com/humansdotai/humans.git
+cd $HOME
+rm -rf humans
+git clone https://github.com/humansdotai/humans
 cd humans
 git checkout v1.0.0
-go build -o humansd cmd/humansd/main.go
-sudo cp humansd /usr/local/bin/humansd
+go build -o $HEART cmd/humansd/main.go
+sudo mv $HEART /usr/bin/
 ```
 
 ## Versiyonu kontrol edelim; v1.0.0 olmalı
@@ -220,23 +222,23 @@ Delegate stake
 humansd tx staking delegate $(humansd keys show wallet --bech val -a) 10000000uheart --from=wallet --chain-id=testnet-1 --gas=auto
 ```
 
-# BccNodes API && RPC && STATE-SYNC && ADDRBOOK 
+# BccNodes API && RPC && STATE-SYNC && SNAPSHOT && ADDRBOOK 
 
 ### Endpoints:
->- [BccNodes API endpoint](https://uptick.api.bccnodes.com/)
+>- [BccNodes API endpoint](https://humans.api.bccnodes.com/)
 
->- [BccNodes RPC endpoint](https://uptick.rpc.bccnodes.com/)
+>- [BccNodes RPC endpoint](https://humans.rpc.bccnodes.com/)
 
->- [BccNodes gRPC endpoint](https://uptick.grpc.bccnodes.com:20090)
+>- [BccNodes gRPC endpoint](https://humans.grpc.bccnodes.com:12090)
 
-### State Sync 
+### Snapshot 
 
 ```
-ŞİMDİLİK ÇALIŞMIYOR
+https://github.com/BccNodes/Snapshot-Statesync/blob/main/Humans%20Testnet-1/readme.md
 ```
 
 ### Addrbook
 ```
-wget -O $HOME/.humans/config/addrbook.json ""
+wget -O $HOME/.humans/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Snapshot-Statesync/main/Humans%20Testnet-1/addrbook.json"
 
 ```
