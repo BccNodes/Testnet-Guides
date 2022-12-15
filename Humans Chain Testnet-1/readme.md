@@ -73,7 +73,7 @@ git clone https://github.com/humansdotai/humans
 cd humans
 git checkout v1.0.0
 go build -o humansd cmd/humansd/main.go
-sudo mv $HEART /usr/bin/
+sudo mv humansd /usr/bin/
 ```
 
 ## Versiyonu kontrol edelim; v1.0.0 olmalı
