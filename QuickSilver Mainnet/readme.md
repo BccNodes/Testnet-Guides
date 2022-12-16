@@ -189,7 +189,7 @@ sudo systemctl restart quicksilverd
 ```
 Delegate stake
 ```
-quicksilverd tx staking delegate $(quicksilverd keys show wallet --bech val -a) 10000000uheart --from=wallet --chain-id=testnet-1 --gas=auto
+quicksilverd tx staking delegate $(quicksilverd keys show wallet --bech val -a) 10000000uqck --from=wallet --chain-id=testnet-1 --gas=auto
 ```
 
 # BccNodes API && RPC && STATE-SYNC && SNAPSHOT && ADDRBOOK 
