@@ -23,14 +23,14 @@
 # QuickSilver Manuel node kurulumu
 
 <p align="center">
-  <img height="220" height="auto" src="humans.jpg">
+  <img height="220" height="auto" src="quicksilver.png">
 </p>
 
-Humans Discord:
->- [Discord](https://discord.gg/humansdotai)
+Quicksilver Discord:
+>- [Discord](https://discord.gg/FPcUhJ3x)
 
 Explorer:
->- https://explorer.bccnodes.com/humans
+>- https://quicksilver.explorers.guru/
 
 ## Sistem Gereksinimleri
 
