@@ -36,7 +36,7 @@ Explorer:
 
 | Node Tipi | CPU |  RAM  | Depolama  |     OS       | GO Version|
 |-----------|-----|-------|-----------|--------------|-----------|
-| Testnet   |  4  | 8GB   |   250GB   | Ubuntu 20.04 | Go v1.19.1|
+| Testnet   |  4  | 8GB   |   250GB   | Ubuntu 20.04 | Go v1.19.3|
 
 ## Gerekli güncellemeleri ve araçları kurunuz
 ```
