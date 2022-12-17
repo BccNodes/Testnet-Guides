@@ -30,7 +30,7 @@ Quicksilver Discord:
 >- [Discord](https://discord.gg/FPcUhJ3x)
 
 Explorer:
->- https://quicksilver.explorers.guru/
+>- https://explorer.bccnodes.com/quicksilver
 
 ## Sistem Gereksinimleri
 
