@@ -30,7 +30,7 @@ Mars Protocol Discord:
 >- [Discord](https://discord.gg/marsprotocol)
 
 Explorer:
->- https://explorer.bccnodes.com/chain4energy
+>- https://explorer.bccnodes.com/mars%20-%20mainnet
 
 ## Sistem Gereksinimleri
 
