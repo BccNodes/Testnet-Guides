@@ -104,7 +104,7 @@ wget -O $HOME/.c4e-chain/config/addrbook.json "https://raw.githubusercontent.com
 
 ## Peers ayarlayalım
 ```
-seeds="52de8a7e2ad3da459961f633e50f64bf597c7585@seed.marsprotocol.io:443"
+seeds="52de8a7e2ad3da459961f633e50f64bf597c7585@seed.marsprotocol.io:443,d2d2629c8c8a8815f85c58c90f80b94690468c4f@tenderseed.ccvalidators.com:26012"
 peers=""
 sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.mars/config/config.toml
 ```
