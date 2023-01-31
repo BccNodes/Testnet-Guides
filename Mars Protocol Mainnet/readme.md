@@ -26,8 +26,8 @@
   <img height="220" height="auto" src="mars-protocol.png">
 </p>
 
-C4E Discord:
->- [Discord](https://discord.gg/chain4energy)
+Mars Protocol Discord:
+>- [Discord](https://discord.gg/marsprotocol)
 
 Explorer:
 >- https://explorer.bccnodes.com/chain4energy
