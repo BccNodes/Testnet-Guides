@@ -115,9 +115,6 @@ sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.000umars"|g' $HOME/.m
 ```
 
 
-i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.c4e-chain/config/config.toml
-```
-
 ## Zincir verilerini sıfırlayalım
 ```
 marsd tendermint unsafe-reset-all --home $HOME/.mars
