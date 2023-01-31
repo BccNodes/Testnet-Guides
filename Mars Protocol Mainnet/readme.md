@@ -71,7 +71,6 @@ git clone https://github.com/mars-protocol/hub.git
 cd hub
 git checkout v1.0.0
 make install
-
 ```
 
 ## Versiyonu kontrol edelim; v1.0.1 olmalı
@@ -82,7 +81,7 @@ marsd version
 ## Nodeu çalıştırmaya hazırlanalım
 ```
 marsd config keyring-backend test
-marsd config chain-id perun-1
+marsd config chain-id mars-1
 marsd init $NODENAME --chain-id mars-1
 marsd config node tcp://localhost:26657
 ```
@@ -97,9 +96,6 @@ Cüzdan oluşturalım veya var olan cüzdanı geri getirelim
 ## Genesis ve addrbook yükleyelim
 ```
 wget https://raw.githubusercontent.com/mars-protocol/networks/main/mars-1/genesis.json -O $HOME/.mars/config/genesis.json
-
-wget -O $HOME/.c4e-chain/config/addrbook.json "https://raw.githubusercontent.com/BccNodes/Testnet-Guides/main/Chain4Energy%20Mainnet/addrbook.json"
-
 ```
 
 ## Peers ayarlayalım
@@ -156,14 +152,14 @@ marsd status 2>&1 | jq .SyncInfo
 >> Cüzdan bakiyesini kontrol etmek için; `marsd query bank balances CÜZDANADRESİNİZ`
 ```
 marsd tx staking create-validator \
---amount 9000000umars \
+--amount 1000000umars \
 --commission-max-change-rate "0.1" \
 --commission-max-rate "0.20" \
 --commission-rate "0.1" \
 --min-self-delegation "1" \
---details "Professionally managed institutional grade blockchain infrastructure provider." \
---website="https://bccnodes.com/" \
---identity=C5337EB8B55DFA0C \
+--details "YOUR DETEAILS" \
+--website="YOUR WEBSITE" \
+--identity=YOUR KEYBASE ID \
 --pubkey=$(marsd tendermint show-validator) \
 --moniker $NODENAME \
 --chain-id mars-1 \
