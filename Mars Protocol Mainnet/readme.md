@@ -23,7 +23,7 @@
 # Mars Protocol Mainnet Manuel node kurulumu
 
 <p align="center">
-  <img height="220" height="auto" src="mars.png">
+  <img height="220" height="auto" src="mars-protocol.png">
 </p>
 
 C4E Discord:
