@@ -67,13 +67,15 @@ NODENAME=<MONIKER_ISMINIZI_GİRİN>
 
 ## Github reposunun bir kopyasını oluşturun ve kurun
 ```
-git clone --depth 1 --branch  v1.0.1  https://github.com/chain4energy/c4e-chain.git
-cd c4e-chain
+git clone --depth 1 --branch  v1.1.0  https://github.com/chain4energy/c4e-chain.git
+
+cd c4e-chain/
+
 make install
 
 ```
 
-## Versiyonu kontrol edelim; v1.0.1 olmalı
+## Versiyonu kontrol edelim; v1.1.0 olmalı (03.02.2023)
 ```
 c4ed version
 ```
