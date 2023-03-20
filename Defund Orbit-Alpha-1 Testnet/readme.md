@@ -47,18 +47,16 @@ sudo apt-get install make build-essential gcc git jq chrony screen -y
 ```
 ## Go yükleyin (tek komut)
 ```
-if ! [ -x "$(command -v go)" ]; then
-  ver="1.19.1"
-  cd $HOME
-  wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
-  sudo rm -rf /usr/local/go
-  sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
-  rm "go$ver.linux-amd64.tar.gz"
-  echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile
-  source $HOME/.bash_profile
-fi
+sudo rm -rvf /usr/local/go/
+wget https://golang.org/dl/go1.19.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
+rm go1.19.3.linux-amd64.tar.gz
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
->> `go version` çıktısı `go version go1.19.1 linux/amd64` olmalıdır
+>> `go version` çıktısı `go version go1.19.3 linux/amd64` olmalıdır
 
 ## Moniker ismimizi atayalım
 ```
