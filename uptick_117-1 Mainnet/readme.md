@@ -68,7 +68,6 @@ NODENAME=<MONIKER_ISMINIZI_GİRİN>
 ## Github reposunun bir kopyasını oluşturun ve kurun
 ```
 git clone https://github.com/UptickNetwork/uptick.git
-tar -xvzf uptick.tar.gz
 cd uptick
 git checkout v0.2.4
 make install
